@@ -192,6 +192,21 @@ footer {
 }
 
 @media (max-width: 1240px) {
+  header h1 {
+    padding: 15px;
+  }
+
+  #responsive-menu {
+    display: block;
+    background: rgb(179, 137, 84);
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    height: 45px;
+  }
+
   section {
     background: rgb(214, 214, 214);
     width: 100%;
@@ -225,9 +240,20 @@ footer {
 }
 
 /* For Mobile Phone in Portrait Mode */
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   body {
     font-size: 30px;
+  }
+
+  #responsive-menu {
+    display: block;
+    background: rgb(179, 137, 84);
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    height: 45px;
   }
 
   #container {
