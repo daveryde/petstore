@@ -21,7 +21,7 @@ body {
 }
 
 header {
-  background-image: url('./banner_image.jpg');
+  background-image: url('../images/banner_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 33%;
@@ -115,7 +115,7 @@ input:focus {
 
 aside {
   background: linear-gradient(rgba(128, 128, 128, 0.5), rgb(128, 128, 128, 0.5)),
-    url('./side_image.jpg') no-repeat;
+    url('../images/side_image.jpg') no-repeat;
   background-size: 100%;
   color: #fff;
   width: 23vw;
@@ -204,7 +204,7 @@ footer {
         rgba(128, 128, 128, 0.5),
         rgb(128, 128, 128, 0.5)
       ),
-      url('./side_image.jpg') no-repeat;
+      url('../images/side_image.jpg') no-repeat;
     background-size: 100%;
     color: #fff;
     width: 100%;
