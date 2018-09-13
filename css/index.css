@@ -11,19 +11,20 @@ body {
 
 /* UTILITY */
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 0;
   margin: 0 auto;
-}
+} */
 
 .section-container {
   display: flex;
   flex-flow: column nowrap;
   align-content: space-between;
+  margin: 0 auto;
   width: 57vw;
   height: 100vh;
 }
