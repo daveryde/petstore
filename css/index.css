@@ -591,6 +591,8 @@ a {
       'citem1 cbutton1'
       'citem2 cbutton2'
       'sbutton sbutton';
+    max-width: 100vw;
+    margin: 0 auto;
   }
 
   /* Flexbox Utility Classes */
@@ -665,20 +667,15 @@ a {
   /* Grid Utility Classes */
 
   .home-container {
-    display: grid;
-    grid-gap: 5px;
     grid-template-areas:
       'header'
       'aside'
       'section2'
       'section1'
       'footer';
-    max-width: 100vw;
-    margin: 0 auto;
   }
 
   .card-container {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
       'cardnav'
@@ -753,8 +750,6 @@ a {
       'section2'
       'section1'
       'footer';
-    max-width: 100vw;
-    margin: 0 auto;
   }
 
   .card-container {
