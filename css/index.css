@@ -736,6 +736,19 @@ a {
   .cardnav li {
     font-size: 1.4em;
   }
+
+  .card-button-1,
+  .card-button-2 {
+    height: 35vh;
+  }
+
+  .card-info1,
+  .card-info2,
+  .card-info3,
+  .card-item1,
+  .card-item2 {
+    height: 55vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
