@@ -56,20 +56,46 @@
 
     <!--     Milestone 4 submitted:       -----------------------------------------------
   | -Modify my website with the following features: _____________________________________________ |
-  | -Content becomes more animated with JavaScript loops and functions.                                          |
+  | -Content becomes more animated with JavaScript loops and functions.                           |
     --------------------------------------------------------------------------------------------- 
 -->
 
 </head>
 
 <body>
+    <div class="quick-toggle">
+        <a href="#top">
+            <h2>Top</h2>
+        </a>
+    </div>
     <div class="container">
-        <div class="grid-container home-container">
+        <div id="top" class="grid-container home-container">
             <!-- An image to be used as a banner.  -->
             <!-- Include a name of the service or business overlaid over the banner image. -->
             <!-- Use h1 headings over text. -->
             <header class="flex-container header">
                 <div class="logo">
+                    <script type="text/javascript">
+                        var now = new Date(); // current date and time
+                        var hour = now.getHours(); // current hour (0-23)
+                        // determine whether it's morning
+                        if (hour < 12)
+                            document.write("<h3>Good Morning, from..</h3> ");
+
+                        // determine whether the time is PM
+                        if (hour >= 12) {
+                            // convert to a 12 hour clock
+                            hour = hour - 12;
+
+                            // determine whether it is before 6 PM
+                            if (hour < 6)
+                                document.write("<h3>Good Afternoon, from ..</h3> ");
+
+                            // determine whether it is after 6 PM
+                            if (hour >= 6)
+                                document.write("<h3>Good Evening, from ..</h3> ");
+                        } // end if
+                    </script>
                     <h1>Pawlished Pets</h1>
                 </div>
 
@@ -78,12 +104,21 @@
                     <ul class="flex-container">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="">Products</a></li>
-                        <li><a href="">Classes</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Classes</a></li>
+                        <li><a href="#">About</a></li>
                     </ul>
                 </nav>
             </header>
+
+            <div class="cardnav bg-dark">
+                <ul class="flex-container mx-0">
+                    <li><a href="services.html">Pet Service</a></li>
+                    <li><a href="#">Grooming</a></li>
+                    <li><a href="#">PetsHotel</a></li>
+                    <li><a href="#">Training</a></li>
+                </ul>
+            </div>
 
             <!-- Use at least one paragraph tag within content.
                     Use a br tag to separate text. -->
@@ -132,7 +167,6 @@
             </footer>
         </div>
     </div>
-
 </body>
 
 </html>

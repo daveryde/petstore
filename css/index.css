@@ -11,8 +11,6 @@ body {
   background: rgba(215, 215, 215, 0.8);
 }
 
-/* ----------------------------FLEXBOX and GRID ------------------------- */
-
 /* Grid Utility Classes */
 
 .container {
@@ -31,6 +29,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     'header header header header'
+    'cardnav cardnav cardnav cardnav'
     'section1 section1 aside aside'
     'section2 section2 aside aside'
     'footer footer footer footer';
@@ -80,7 +79,7 @@ header {
   background-size: cover;
   background-position: center 33%;
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   margin-bottom: 5px;
   padding: 0;
   -webkit-box-orient: horizontal;
@@ -93,7 +92,7 @@ header {
 }
 
 header h1 {
-  padding: 0.2em;
+  padding: 0 0.2em;
   font-size: 3em;
 }
 
@@ -549,6 +548,23 @@ a {
   color: white;
 }
 
+.quick-toggle {
+  position: fixed;
+  top: 100vh;
+  right: 2%;
+  padding: 0.1rem 0.8rem;
+  text-align: center;
+  border-radius: 100px;
+  background: rgba(255, 208, 127, 0.5);
+  z-index: 10;
+}
+
+.quick-toggle h1,
+.quick-toggle a {
+  font-family: sans-serif;
+  color: black;
+}
+
 /* ------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 960px) {
@@ -570,7 +586,7 @@ a {
     grid-gap: 5px;
     grid-template-areas:
       'header'
-      'navbar'
+      'cardnav'
       'aside'
       'section1'
       'section2'
@@ -631,14 +647,6 @@ a {
     font-size: 1.8em;
   }
 
-  .section1 ul {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
   .aside {
     margin-left: -1px;
   }
@@ -663,12 +671,13 @@ a {
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 700px) {
   /* Grid Utility Classes */
 
   .home-container {
     grid-template-areas:
       'header'
+      'cardnav'
       'aside'
       'section2'
       'section1'
@@ -751,7 +760,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   /* Grid Utility Classes */
 
   .home-container {
@@ -759,6 +768,7 @@ a {
     grid-gap: 5px;
     grid-template-areas:
       'header'
+      'cardnav'
       'aside'
       'section2'
       'section1'
@@ -807,9 +817,14 @@ a {
     width: 80%;
     border-radius: 100px;
   }
+
+  .quick-toggle {
+    top: 83%;
+    right: 5%;
+  }
 }
 
-@media only screen and (max-height: 450px) and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   .card-container {
     display: grid;
     grid-template-areas:
@@ -848,5 +863,10 @@ a {
 
   section {
     height: 100%;
+  }
+
+  .quick-toggle {
+    top: 70%;
+    right: 5%;
   }
 }
