@@ -43,7 +43,19 @@ body {
   grid-template-areas:
     'header header header header'
     'main main main main'
-	'main main main main'
+    'main main main main'
+    'footer footer footer footer';
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'header header header header'
+    'main main main main'
+    'main main main main'
     'footer footer footer footer';
   max-width: 100vw;
   margin: 0 auto;
@@ -104,6 +116,13 @@ header h1 {
   -webkit-text-stroke: 1px dimgrey;
 }
 
+.greeting {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 1.3rem;
+}
+
 /* NAVIGATION */
 
 .navbar {
@@ -162,6 +181,8 @@ section:nth-child(even) {
   margin-bottom: 5px;
 }
 
+/* Section Area */
+
 section {
   background: rgb(214, 214, 214);
   font-size: 1.2em;
@@ -174,6 +195,8 @@ section {
 section ul {
   list-style-type: none;
 }
+
+/* Aside Area */
 
 .aside {
   grid-area: aside;
@@ -238,28 +261,29 @@ input:focus {
 }
 
 .cardnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: -5px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  margin-bottom: 10px;
   grid-area: cardnav;
 }
 
 .cardnav ul {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 1 0 auto;
+  margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .cardnav li {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
+  width: 18vw;
   margin: 0;
   padding: 10px;
   -webkit-transition: 1s;
@@ -741,9 +765,13 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .cardnav li {
+    margin-top: 20px;
     font-size: 1.4em;
   }
 

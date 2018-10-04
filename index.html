@@ -77,12 +77,13 @@
             <!-- Use h1 headings over text. -->
             <header class="flex-container header">
                 <div class="logo">
+                    <!-- JavaScript greeting based on time of day -->
                     <script type="text/javascript">
                         var now = new Date(); // current date and time
                         var hour = now.getHours(); // current hour (0-23)
                         // determine whether it's morning
                         if (hour < 12)
-                            document.write("<h3>Good Morning, from..</h3> ");
+                            document.write("<span class='greeting'>Good Morning, from..</span> ");
 
                         // determine whether the time is PM
                         if (hour >= 12) {
@@ -91,11 +92,11 @@
 
                             // determine whether it is before 6 PM
                             if (hour < 6)
-                                document.write("<h3>Good Afternoon, from ..</h3> ");
+                                document.write("<span class='greeting'>Good Afternoon, from ..</span> ");
 
                             // determine whether it is after 6 PM
                             if (hour >= 6)
-                                document.write("<h3>Good Evening, from ..</h3> ");
+                                document.write("<span class='greeting'>Good Evening, from ..</span> ");
                         } // end if
                     </script>
                     <h1>Pawlished Pets</h1>
@@ -104,50 +105,60 @@
                 <!-- Navigational Section -->
                 <nav class="navbar">
                     <ul class="flex-container">
-                        <a href="index.html"><li>Home</li></a>
-                        <a href="services.html"><li>Services</li></a>
-                        <a href="#"><li>Products</li></a>
-                        <a href="#"><li>Classes</li></a>
-                        <a href="#"><li>About</li></a>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="services.html">
+                            <li>Services</li>
+                        </a>
+                        <a href="#">
+                            <li>Products</li>
+                        </a>
+                        <a href="#">
+                            <li>Classes</li>
+                        </a>
+                        <a href="about.html">
+                            <li>About</li>
+                        </a>
                     </ul>
                 </nav>
             </header>
 
             <div class="cardnav bg-dark">
                 <ul class="flex-container mx-0">
-                    <li><a href="services.html">Pet Service</a></li>
-                    <li><a href="#">Grooming</a></li>
-                    <li><a href="#">PetsHotel</a></li>
-                    <li><a href="#">Training</a></li>
+                    <a href="services.html">
+                        <li>Pet Service</li>
+                    </a>
+                    <a href="#">
+                        <li>Grooming</li>
+                    </a>
+                    <a href="#">
+                        <li>PetsHotel</li>
+                    </a>
+                    <a href="#">
+                        <li>Training</li>
+                    </a>
                 </ul>
             </div>
 
             <!-- Use at least one paragraph tag within content.
                     Use a br tag to separate text. -->
             <section class="section1 txt-white bg-medium">
-                <p class="center mb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur,
-                    odio,
-                    aspernatur,
-                    autem
-                    in
-                    <br> quasi corporis cupiditate vero distinctio eius iusto alias voluptatem quisquam. Eaque
-                    aliquid
-                    aut cumque natus iste earum.</p>
+                <p class="center mb-1">Welcome To The Official Pawlished Pets Website.
+                    <br><br> We offer many products and services such as ...</p>
 
                 <!-- Add an unordered list. -->
                 <ul class="center">
-                    <li><a class="txt-white" href="#">Lorem</a></li>
-                    <li><a class="txt-white" href="#">Lorem</a></li>
-                    <li><a class="txt-white" href="#">Lorem</a></li>
+                    <li><a class="txt-white" href="#">Products</a></li>
+                    <li><a class="txt-white" href="#">Grooming</a></li>
+                    <li><a class="txt-white" href="#">Pet Training</a></li>
                 </ul>
             </section>
 
             <!-- ** Section for newsletter -->
             <section class="section2 txt-black bg-light">
                 <div class="rel-center">
-                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, odio,
-                        aspernatur,
-                        autem.</p>
+                    <p class="center">Join Our Mailing List To Recieve Discount Coupons And Special Offers!</p>
                     <form class="form-control">
                         <label for="email">Email: </label>
                         <input class="form-item" type="email" placeholder="name@domain.com" />
@@ -159,8 +170,7 @@
             <!-- Add a second image to the web page with an appropriate size. -->
             <aside class="aside txt-white">
                 <p class="rel-center">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla eius perferendis in
-                    tempora!
+                    Pet Approved Services Guaranteed To Satisfy
                 </p>
             </aside>
             <!-- Add a footer with an h4 heading at the bottom to hold copyright information for the website. -->
