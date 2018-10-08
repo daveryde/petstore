@@ -55,14 +55,11 @@
     --------------------------------------------------------------------------------------------- 
 -->
 
-  <!--     Milestone 4 submitted:       -----------------------------------------------
+  <!--     Milestone 4 submitted: 10/07/2018        -----------------------------------------------
   | -Modify my website with the following features: _____________________________________________ |
   | -Created pages and added more content to (products, about)                                    |
   | -Used JavaScript to print a HTML table and loop through products and prices for display       |
-  | -Content becomes more animated with JavaScript loops and functions.                           |
-  | -Content becomes more animated with JavaScript loops and functions.                           |
-  | -Content becomes more animated with JavaScript loops and functions.                           |
-  | -Content becomes more animated with JavaScript loops and functions.                           |
+  | -Used JavaScript to print a HTML table and loop through dicount prices                        |
     --------------------------------------------------------------------------------------------- 
 -->
 
@@ -76,7 +73,7 @@
     </a>
   </div>
   <div class="container">
-    <div id="top" class="grid-container about-container">
+    <div id="top" class="grid-container products-container">
       <!-- An image to be used as a banner.  -->
       <!-- Include a name of the service or business overlaid over the banner image. -->
       <!-- Use h1 headings over text. -->
@@ -128,14 +125,71 @@
           </ul>
         </nav>
       </header>
-
       <main>
+
         <script type="text/javascript">
-          var price;
-          document.write("<table><thead><tr><td>Products</td><td>Price</td></tr></thead><tr><td>Item</td><td>$$</td></tr></table>");
+          // Set a counter variable
+          var font = 1;
+          // Use a while loop that uses the counter variable as the
+          // style size that increments by one until loop is terminated
+          while (font < 4) {
+            document.writeln("<p class='center' style='font-size: " + font + "em'>Pawlished Pets</p>")
+            font++;
+          }
+        </script>
+
+        <script type="text/javascript">
+          // Set a variable called products that holds an array of
+          // animal objects which stores the type of service and corresponding prices
+          var products = [
+            largeDogs = {
+              service: "Large Dog Grooming",
+              price: 65
+            },
+            smallDogs = {
+              service: "Small Dog Grooming",
+              price: 50
+            },
+            largeCat = {
+              service: "Large Cat Grooming",
+              price: 45
+            },
+            smallCat = {
+              service: "Small Cat Grooming",
+              price: 35
+            }
+          ];
+          // Create a table in the HTML document
+          document.write("<table class='center'><caption><p>Pawlished Pets Products</p></caption>");
+          document.write("<thead><tr><th>Grooming Services</th><th>Price</th></tr></thead><tbody>");
+
+          // Loop through the length of the product arrays and displays
+          // the service and price within the table
+          for (var i = 0; i <= products.length - 1; i++) {
+            document.write("<tr><td>" + products[i].service + "</td><td>" + products[i].price + "</td></tr>");
+          };
+          // End of table in the HTML document
+          document.write("</tbody></table><br><br>");
+        </script>
+
+        <script type="text/javascript">
+          // Create a table in the HTML document
+          document.write("<table class='center'><caption><p>Pawlished Pets Discount Prices</p></caption>");
+          document.write("<thead><tr><th>Grooming Services</th><th>Price</th></tr></thead><tbody>");
+
+          // Loop through the length of the product arrays and displays
+          // the calculated discount (-25%) price within the table
+          for (var i = 0; i < products.length; i++) {
+            var discount = parseFloat(products[i].price) / 1.25;
+
+            document.write("<tr><td>" + products[i].service + "</td><td>" + discount + "</td></tr>");
+          };
+          // End of table in the HTML document
+          document.write("</tbody></table>");
+
+
         </script>
       </main>
-
       <!-- Add a footer with an h4 heading at the bottom to hold copyright information for the website. -->
       <footer class="txt-white bg-dark">
         <a href="mailto:david_cordova@stu.centralaz.edu">David Cordova</a> &copy; 2018
