@@ -149,21 +149,92 @@
 
           <!-- Card Grid for Services Section -->
           <div class="card-header bg-light mid-height center">
-            <p class="rel-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam veniam cum
-              reprehenderit quas,
-              sapiente corporis, quae in molestiae odit odio natus quos numquam repudiandae eaque repellat doloribus
-              quam eveniet molestias.</p>
+            <p class="rel-center">
+              <!-- Form and JavaScript -->
+              <form action="#" id="form">
+                <h2>Quick Pick and Quote</h2>
+                <hr>
+                <label for="dog">Dogs</label>
+                <p class="flex-container row-direction centered">
+                  <input type="checkbox" class="form-item" id="largeDogCut" name="largeDog" value="65">Large - Hair Cut<br>
+                  <input type="checkbox" class="form-item" id="smallDogCut" name="smallDog" value="30">Small - Hair Cut
+                  <input type="checkbox" class="form-item" id="largeDogNail" name="largeDog" value="8">Large - Nail
+                  Trim<br>
+                  <input type="checkbox" class="form-item" id="smallDogNail" name="smallDog" value="5">Small - Nail
+                  Trim
+                  <input type="checkbox" class="form-item" id="largeDogBath" name="smallDog" value="25">Large - Bathe
+                  and Dry
+                  <input type="checkbox" class="form-item" id="smallDogBath" name="smallDog" value="15">Small - Bathe
+                  and
+                  Dry
+
+                </p>
+                <label for="cat">Cat</label>
+                <p class="flex-container row-direction centered">
+                  <input type="checkbox" class="form-item" id="largeCat1" value="45">Large - Hair and
+                  Nail Groom<br>
+                  <input type="checkbox" class="form-item" id="smallCat1" value="35">Small - Hair and
+                  Nail Groom
+                  <input type="checkbox" class="form-item" id="largeCat2" value="45">Large - Bathe and
+                  Dry<br>
+                  <input type="checkbox" class="form-item" id="smallCat2" value="35">Small - Bathe and
+                  Dry
+                </p>
+                <input type="button" value="Submit" id="submit" class="btn">
+              </form>
+
+              <script type="text/javascript">
+                // Function that calls on getSelected() to display the prices of the checked items that the user selected in the .cardinfo boxes below
+                var services = function () {
+                  var selected = getSelected(this.form);
+
+                  results = document.getElementById("card-info");
+                  results.innerHTML = 'The prices are $' + selected;
+                };
+
+                // Function that accepts a parameter and loops through the  "input" tags inside that parameter. We verify whether a check box was checked and push the value to an array variable called items
+                var getSelected = function (form) {
+                  var items = [];
+
+                  var input = form.getElementsByTagName("input");
+
+                  for (var i = 0; i < input.length; i++) {
+                    if (input[i].type == 'checkbox' && input[i].checked == true) {
+                      items.push(input[i].value);
+                    }
+                  }
+                  return calculatePrice(items); // Calls on the caculate function
+                }
+
+                // Function that accepts a parameter and loops through it's values and returns the sum of each item
+                var calculatePrice = function (items) {
+                  var sum = 0;
+
+                  for (var i = 0; i < items.length; i++) {
+                    sum = sum + parseInt(items[i]);
+                  }
+
+                  return sum;
+                }
+
+                document.getElementById("submit").addEventListener('click', services, false);
+                  // var selected = getSelected(this.form);
+
+                  // results = document.getElementById("card-info");
+                  // results.innerHTML = 'The prices are ' + selected;
+              </script>
+            </p>
           </div>
 
           <!-- Small Info Boxes Below the Card Head -->
           <div class="flex-container bg-medium card-info1 mid-height">
-            <p>.card-info</p>
+            <p id="card-info"></p>
           </div>
           <div class="flex-container bg-medium card-info2 mid-height">
-            <p>.card-info</p>
+            <p id="card-info"></p>
           </div>
           <div class="flex-container bg-medium card-info3 mid-height">
-            <p>.card-info</p>
+            <p id="card-info"></p>
           </div>
 
           <!-- Large Card Box for info -->

@@ -126,69 +126,80 @@
         </nav>
       </header>
       <main>
+        <div class="menu-left">
+          <div class="data-left">
+            <script type="text/javascript">
+              // Set a variable called products that holds an array of
+              // animal objects which stores the type of service and corresponding prices
+              var products = [
+                largeDogs = {
+                  service: "Large Dog Grooming",
+                  price: 65
+                },
+                smallDogs = {
+                  service: "Small Dog Grooming",
+                  price: 50
+                },
+                largeCat = {
+                  service: "Large Cat Grooming",
+                  price: 45
+                },
+                smallCat = {
+                  service: "Small Cat Grooming",
+                  price: 35
+                }
+              ];
+              // Create a table in the HTML document
+              document.write("<table class='center mid-width'><caption><h2>Pawlished Pets Products</h2></caption>");
+              document.write("<thead><tr><th>Grooming Services</th><th>Price</th></tr></thead><tbody>");
 
-        <script type="text/javascript">
-          // Set a counter variable
-          var font = 1;
-          // Use a while loop that uses the counter variable as the
-          // style size that increments by one until loop is terminated
-          while (font < 4) {
-            document.writeln("<p class='center' style='font-size: " + font + "em'>Pawlished Pets</p>")
-            font++;
-          }
-        </script>
+              // Loop through the length of the product arrays and displays
+              // the service and price within the table
+              for (var i = 0; i <= products.length - 1; i++) {
+                document.write("<tr><td>" + products[i].service + "</td><td>" + products[i].price + "</td></tr>");
+              };
+              // End of table in the HTML document
+              document.write("</tbody></table><br><br>");
+            </script>
+          </div>
+        </div>
+        <div class="menu-right">
+          <div class="data-right">
+            <script type="text/javascript">
+              var products = [
+                largeDogs = {
+                  service: "Large Dog Grooming",
+                  price: 65
+                },
+                smallDogs = {
+                  service: "Small Dog Grooming",
+                  price: 50
+                },
+                largeCat = {
+                  service: "Large Cat Grooming",
+                  price: 45
+                },
+                smallCat = {
+                  service: "Small Cat Grooming",
+                  price: 35
+                }
+              ];
+              // Create a table in the HTML document
+              document.write("<table class='center mid-width'><caption><h2>Pawlished Pets Discount Prices</h2></caption>");
+              document.write("<thead><tr><th>Grooming Services</th><th>Price</th></tr></thead><tbody>");
 
-        <script type="text/javascript">
-          // Set a variable called products that holds an array of
-          // animal objects which stores the type of service and corresponding prices
-          var products = [
-            largeDogs = {
-              service: "Large Dog Grooming",
-              price: 65
-            },
-            smallDogs = {
-              service: "Small Dog Grooming",
-              price: 50
-            },
-            largeCat = {
-              service: "Large Cat Grooming",
-              price: 45
-            },
-            smallCat = {
-              service: "Small Cat Grooming",
-              price: 35
-            }
-          ];
-          // Create a table in the HTML document
-          document.write("<table class='center'><caption><p>Pawlished Pets Products</p></caption>");
-          document.write("<thead><tr><th>Grooming Services</th><th>Price</th></tr></thead><tbody>");
+              // Loop through the length of the product arrays and displays
+              // the calculated discount (-25%) price within the table
+              for (var i = 0; i < products.length; i++) {
+                var discount = parseFloat(products[i].price) / 1.25;
 
-          // Loop through the length of the product arrays and displays
-          // the service and price within the table
-          for (var i = 0; i <= products.length - 1; i++) {
-            document.write("<tr><td>" + products[i].service + "</td><td>" + products[i].price + "</td></tr>");
-          };
-          // End of table in the HTML document
-          document.write("</tbody></table><br><br>");
-        </script>
-
-        <script type="text/javascript">
-          // Create a table in the HTML document
-          document.write("<table class='center'><caption><p>Pawlished Pets Discount Prices</p></caption>");
-          document.write("<thead><tr><th>Grooming Services</th><th>Price</th></tr></thead><tbody>");
-
-          // Loop through the length of the product arrays and displays
-          // the calculated discount (-25%) price within the table
-          for (var i = 0; i < products.length; i++) {
-            var discount = parseFloat(products[i].price) / 1.25;
-
-            document.write("<tr><td>" + products[i].service + "</td><td>" + discount + "</td></tr>");
-          };
-          // End of table in the HTML document
-          document.write("</tbody></table>");
-
-
-        </script>
+                document.write("<tr><td>" + products[i].service + "</td><td>" + discount + "</td></tr>");
+              };
+              // End of table in the HTML document
+              document.write("</tbody></table><br><br>");
+            </script>
+          </div>
+        </div>
       </main>
       <!-- Add a footer with an h4 heading at the bottom to hold copyright information for the website. -->
       <footer class="txt-white bg-dark">

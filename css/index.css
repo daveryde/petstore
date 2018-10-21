@@ -92,6 +92,29 @@ body {
   display: flex;
 }
 
+.col-direction {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.row-direction {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.centered {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 /* HEADER */
 
 header {
@@ -192,6 +215,20 @@ section:nth-child(even) {
   margin-bottom: 5px;
 }
 
+.menu-left,
+.menu-right {
+  width: 100%;
+}
+
+.menu-left .data-left {
+  float: left;
+}
+
+.menu-right .data-right {
+  clear: both;
+  float: right;
+}
+
 /* Section Area */
 
 section {
@@ -262,6 +299,11 @@ tr:nth-child(odd) {
   background: white;
 }
 
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .form-control {
   font-weight: bold;
   margin: 3rem auto;
@@ -283,6 +325,10 @@ tr:nth-child(odd) {
 .form-control input[type='submit'] {
   margin: -10px;
   border-radius: 0 100px 100px 0;
+}
+
+input[type='checkbox'] {
+  margin: 5px;
 }
 
 input:focus {
@@ -573,6 +619,10 @@ footer {
   height: 100vh;
 }
 
+.mid-width {
+  width: 30vw;
+}
+
 .max-width {
   width: 60vw;
 }
@@ -606,6 +656,10 @@ h1 {
 a {
   text-decoration: none;
   color: white;
+}
+
+hr {
+  width: 90%;
 }
 
 .quick-toggle {
@@ -934,10 +988,6 @@ a {
     margin: 1rem auto;
     padding: 0;
     text-align: center;
-  }
-
-  label {
-    display: none;
   }
 
   .form-item {
