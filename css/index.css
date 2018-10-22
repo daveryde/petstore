@@ -325,11 +325,8 @@ label {
 form {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  width: 100%;
-  max-height: 30vh;
+  max-width: 100%;
   margin: 0 auto;
-  border: 1px solid #fff;
-  text-align: center;
 }
 
 input[type='checkbox'] {
@@ -342,18 +339,18 @@ input[type='checkbox'] {
 
 .left,
 .right {
-  margin: 0;
+  margin: 20px auto;
   padding: 0.5rem;
-}
-
-.left {
-  width: 45%;
   float: left;
 }
 
+.left {
+  margin-left: 30%;
+  width: 25%;
+}
+
 .right {
-  width: 45%;
-  float: right;
+  width: 25%;
 }
 
 .form-control {
@@ -372,9 +369,16 @@ input[type='checkbox'] {
   border-style: none;
 }
 
-.form-control input[type='submit'] {
+input[type='submit'] {
   margin: -10px;
   border-radius: 0 100px 100px 0;
+}
+
+input[type='text'],
+input[type='email'] {
+  font-size: 18px;
+  text-align: center;
+  height: 50px;
 }
 
 input:focus {
@@ -645,6 +649,16 @@ footer {
   padding: 1.2rem;
 }
 
+#submit {
+  width: 25%;
+}
+
+.submit {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .rel-center {
   position: relative;
   top: 50%;
@@ -887,10 +901,12 @@ hr {
       'section2'
       'section1'
       'footer';
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0 auto;
   }
 
   .services-container {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       'header'
@@ -947,6 +963,7 @@ hr {
     flex-direction: column;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    width: 100vw;
     height: 100vh;
   }
 
@@ -1006,6 +1023,15 @@ hr {
   .card-item1,
   .card-item2 {
     height: 55vh;
+  }
+
+  .left,
+  .right {
+    font-size: 1.1rem;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    float: none;
   }
 }
 

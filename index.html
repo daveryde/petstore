@@ -8,6 +8,7 @@
     <title>Pawlished Pets Home</title>
     <link rel="stylesheet" href="./css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <script type="text/javascript" src="./javascript/date.js"></script>
 
     <!--     Milestone 1 submitted: 09/02/2018      -----------------------------------------------
   | Create a website with the following features:  _____________________________________________  |
@@ -94,27 +95,6 @@
             <header class="flex-container header">
                 <div class="logo">
                     <!-- JavaScript greeting based on time of day -->
-                    <script type="text/javascript">
-                        var now = new Date(); // current date and time
-                        var hour = now.getHours(); // current hour (0-23)
-                        // determine whether it's morning
-                        if (hour < 12)
-                            document.write("<span class='greeting'>Good Morning, from..</span> ");
-
-                        // determine whether the time is PM
-                        if (hour >= 12) {
-                            // convert to a 12 hour clock
-                            hour = hour - 12;
-
-                            // determine whether it is before 6 PM
-                            if (hour < 6)
-                                document.write("<span class='greeting'>Good Afternoon, from ..</span> ");
-
-                            // determine whether it is after 6 PM
-                            if (hour >= 6)
-                                document.write("<span class='greeting'>Good Evening, from ..</span> ");
-                        } // end if
-                    </script>
                     <h1>Pawlished Pets</h1>
                 </div>
 
