@@ -326,7 +326,10 @@ form {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   max-width: 100%;
-  margin: 0 auto;
+}
+
+form h2 {
+  margin-bottom: 5%;
 }
 
 input[type='checkbox'] {
@@ -1027,7 +1030,7 @@ hr {
   }
 
   .card-header {
-    height: 80vh;
+    height: 85vh;
   }
 
   .card-info1,
