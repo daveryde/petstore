@@ -78,7 +78,7 @@ body {
   grid-template-areas:
     'cardnav cardnav cardnav cardnav'
     'chead chead chead chead'
-    'cinfo1 cinfo1 cinfo2 cinfo3'
+    'cinfo1 cinfo1 cinfo2 cinfo2'
     'citem1 citem1 citem1 cbutton1'
     'citem2 citem2 citem2 cbutton2'
     'sbutton sbutton sbutton sbutton';
@@ -339,18 +339,18 @@ input[type='checkbox'] {
 
 .left,
 .right {
-  margin: 20px auto;
-  padding: 0.5rem;
+  margin: 5% auto;
   float: left;
 }
 
 .left {
-  margin-left: 30%;
-  width: 25%;
+  margin-left: 15%;
+  width: 35%;
 }
 
 .right {
-  width: 25%;
+  margin-left: 15%;
+  width: 35%;
 }
 
 .form-control {
@@ -440,10 +440,14 @@ input:focus {
 
 .card-info1,
 .card-info2,
-.card-info3,
 .card-item1,
 .card-item2 {
   margin: 15px 10px;
+}
+
+.card-info1 h2,
+.card-info2 h2 {
+  margin-left: 2%;
 }
 
 .card-button-1 {
@@ -490,9 +494,9 @@ input:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
 }
 
 .card-info2 {
@@ -500,19 +504,8 @@ input:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.card-info3 {
-  grid-area: cinfo3;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .card-item1 {
@@ -651,6 +644,7 @@ footer {
 
 #submit {
   width: 25%;
+  margin-bottom: 5%;
 }
 
 .submit {
@@ -822,7 +816,6 @@ hr {
       'chead chead'
       'cinfo1 cinfo1'
       'cinfo2 cinfo2'
-      'cinfo3 cinfo3'
       'citem1 cbutton1'
       'citem2 cbutton2'
       'sbutton sbutton';
@@ -888,6 +881,27 @@ hr {
   .btn-lg {
     padding: 1.2rem;
   }
+
+  .left,
+  .right {
+    font-size: 1.2rem;
+    float: left;
+  }
+
+  .left {
+    margin-left: 20%;
+    width: 35%;
+  }
+
+  .right {
+    margin-left: 5%;
+    width: 35%;
+  }
+
+  .card-info1 h2,
+  .card-info2 h2 {
+    margin-left: 1%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -948,7 +962,6 @@ hr {
       'chead'
       'cinfo1'
       'cinfo2'
-      'cinfo3'
       'citem1'
       'cbutton1'
       'citem2'
@@ -1014,12 +1027,25 @@ hr {
   }
 
   .card-header {
-    height: 75vh;
+    height: 80vh;
+  }
+
+  .card-info1,
+  .card-info2 {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  .card-info1 p,
+  .card-info2 p {
+    margin-left: 2%;
   }
 
   .card-info1,
   .card-info2,
-  .card-info3,
   .card-item1,
   .card-item2 {
     height: 55vh;
@@ -1029,7 +1055,7 @@ hr {
   .right {
     font-size: 1.1rem;
     width: 70%;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 1rem 0;
     float: none;
   }
@@ -1057,7 +1083,6 @@ hr {
       'chead'
       'cinfo1'
       'cinfo2'
-      'cinfo3'
       'citem1'
       'cbutton1'
       'citem2'
@@ -1106,7 +1131,6 @@ hr {
       'chead'
       'cinfo1'
       'cinfo2'
-      'cinfo3'
       'citem1'
       'cbutton1'
       'citem2'

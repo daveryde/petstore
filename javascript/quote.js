@@ -6,10 +6,17 @@ var start = function() {
 // Function that calls on getSelected() to display the prices of the checked items that the user selected in the .cardinfo boxes below
 var services = function() {
   var selected = getSelected(this.form);
+  var discounted = calculateDiscount(selected);
 
-  results = document.getElementById('card-info');
+  results = document.getElementById('card-info1');
   results.innerHTML =
-    '<h1 class="txt-white">The prices are $' + selected + '</h1>';
+    '<h2 class="txt-white center">Total prices: $' +
+    calculatePrice(selected) +
+    '</h2>';
+
+  sale = document.getElementById('card-info2');
+  sale.innerHTML =
+    '<h2 class="txt-white center">Discounted prices: $' + discounted + '</h2>';
 };
 
 // Function that accepts a parameter and loops through the "input" tags inside that parameter. We verify whether a check box was checked and push the value to an array variable called items
@@ -23,17 +30,23 @@ var getSelected = function(form) {
       items.push(input[i].value);
     }
   }
-  return calculatePrice(items); // Calls on the caculate function
+  return items;
 };
 
 // Function that accepts a parameter and loops through it's values and returns the sum of each item
-var calculatePrice = function(items) {
+var calculatePrice = function(list) {
   var sum = 0;
 
-  for (var i = 0; i < items.length; i++) {
-    sum = sum + parseInt(items[i]);
+  for (var i = 0; i < list.length; i++) {
+    sum = sum + parseInt(list[i]);
   }
   return sum;
+};
+
+var calculateDiscount = function(item) {
+  newPrice = parseInt(item) / 1.25;
+
+  return newPrice;
 };
 
 window.addEventListener('load', start, false);
