@@ -13,7 +13,7 @@ function start() {
   next.addEventListener('click', forward, false);
 }
 
-function pickImage(direction) {
+function pickImage() {
   slideImg.setAttribute('src', '../images/' + pictures[index] + '.jpg');
   slideImg.setAttribute('alt', descriptions[index]);
 }
@@ -24,7 +24,7 @@ function reverse() {
   } else {
     index--;
   }
-  pickImage(index);
+  pickImage();
 }
 
 function forward() {
@@ -33,7 +33,7 @@ function forward() {
   } else {
     index++;
   }
-  pickImage(index);
+  pickImage();
 }
 
 window.addEventListener('load', start, false);
