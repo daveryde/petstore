@@ -1,4 +1,5 @@
 var start = function() {
+  // Gets the DOM form inputs from the submit button on the page
   var form = document.getElementById('submit');
   form.addEventListener('click', services, false);
 };
@@ -51,4 +52,5 @@ var calculateDiscount = function(item) {
   return newPrice.toFixed(2);
 };
 
+// Loads the file once the page is loaded into the browser
 window.addEventListener('load', start, false);

@@ -26,4 +26,5 @@ var showDate = function() {
   } // end if
 };
 
+// Loads the file once the page is loaded into the browser
 window.addEventListener('load', showDate, false);
