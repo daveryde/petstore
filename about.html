@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pawlished Pets Home</title>
+  <link rel="stylesheet" href="./css/collage.css">
   <link rel="stylesheet" href="./css/index.css">
   <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
   <script type="text/javascript" src="./javascript/date.js"></script>
+  <script src="./javascript/collage.js"></script>
+  <script src="./javascript/move.js"></script>
 
   <!--     Milestone 1 submitted: 09/02/2018      -----------------------------------------------
   | Create a website with the following features:  _____________________________________________  |
@@ -121,11 +124,45 @@
         </nav>
       </header>
 
-      <main>
+      <main class="flex-container row-direction row-spaced">
+        <div>
         <h1>Pawlished Pet Store</h1>
         <br><br>
         <h2>John Doe</h2>
         <p>Founder and Owner</p>
+        </div>
+
+        <div class="end collage_container">
+          <!-- Heading and Search Bar -->
+          <div class="collage_menubar">
+            <p>
+              <h1>Pet Collage <span id="welcome"></span></h1>
+            </p>
+            <p>
+              <span>Highlight Reel</span>
+              <input type="button" value="Search" id="submitButton">
+              <input type="button" id="order" value="Rearrange" />
+            </p>
+            <p><h3>Drag and Drop (Click Rearrange)</h3></p>
+          </div>
+          <!-- Body of Images -->
+          
+          <div id="list">
+          
+            <!-- Example of Photo Card
+            <div class='polaroid'>
+              <div>
+                <img src="">
+                <p>
+                  Name
+                </p>
+                <input type='button' id='' onclick='del(id)' value='Delete'>
+              </div>
+            </div> 
+            -->
+          </div>
+      
+        </div>
       </main>
 
       <!-- Add a footer with an h4 heading at the bottom to hold copyright information for the website. -->
