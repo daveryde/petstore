@@ -1,175 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pawlished Pets Home</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merienda"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="./javascript/date.js"></script>
 
-    <!--     Milestone 1 submitted: 09/02/2018      -----------------------------------------------
-  | Create a website with the following features:  _____________________________________________  |
-  | An image to be used as a banner. The image should be 880 pixels wide by 150 pixels tall.      |
-  | Include a name of the service or business overlaid over the banner image.                     |
-  | Use h1 and h3 headings over text.                                                             |
-  | Use at least one paragraph tag within content.                                                |
-  | Use a br tag to separate text.                                                                |
-  | Add a second image to the web page with an appropriate size.                                  |
-  | Add an unordered list.                                                                        |
-  | Use a second unordered list with hyperlinks to other related websites.                        |
-  | Add a footer with an h4 heading at the bottom to hold copyright information for the website.  |
-  | ** Create a navigational section below the banner                                             |
-  | ** Create a newsletter section within the main showcase                                       |
-  | ** Implement color scheme and layout classes                                                  |
-   -----------------------------------------------------------------------------------------------
--->
+    <!--
+      Milestone 1 submitted: 09/02/2018      -----------------------------------------------
+      | Create a website with the following features:  _____________________________________________  |
+      | An image to be used as a banner. The image should be 880 pixels wide by 150 pixels tall.      |
+      | Include a name of the service or business overlaid over the banner image.                     |
+      | Use h1 and h3 headings over text.                                                             |
+      | Use at least one paragraph tag within content.                                                |
+      | Use a br tag to separate text.                                                                |
+      | Add a second image to the web page with an appropriate size.                                  |
+      | Add an unordered list.                                                                        |
+      | Use a second unordered list with hyperlinks to other related websites.                        |
+      | Add a footer with an h4 heading at the bottom to hold copyright information for the website.  |
+      | ** Create a navigational section below the banner                                             |
+      | ** Create a newsletter section within the main showcase                                       |
+      | ** Implement color scheme and layout classes                                                  |
+       -----------------------------------------------------------------------------------------------
+    -->
 
-    <!--     Milestone 2 submitted: 09/05/2018      -----------------------------------------------
-  | -Modify my website with the following features: _____________________________________________ |
-  | - ** Uploaded to web host: https://daveryde.github.io/petstore                                |
-  | -Change element width and height values to fluid replacement values                           |
-  | -Added a mock user subsciption form inside a section                                          |
-  | -Added custom css tags and styling to form and input items                                    |
-  | --------------------------------------------------------------------------------------------- |
-  | -Created a media query to change element width for devices less with than 960, 700, and 500px |
-  | ** Max-Width to include:                                                                      |
-  | -Change of navigation display from inline to block and li tags to 100% width                  |
-  | -Change of sections and aside element width to 100% and background transparent overlay        |
-  | -Created a CSS menu popout through hover and display manipulation                             |
-    --------------------------------------------------------------------------------------------- 
--->
+    <!--
+      Milestone 2 submitted: 09/05/2018      -----------------------------------------------
+      | -Modify my website with the following features: _____________________________________________ |
+      | - ** Uploaded to web host: https://daveryde.github.io/petstore                                |
+      | -Change element width and height values to fluid replacement values                           |
+      | -Added a mock user subsciption form inside a section                                          |
+      | -Added custom css tags and styling to form and input items                                    |
+      | --------------------------------------------------------------------------------------------- |
+      | -Created a media query to change element width for devices less with than 960, 700, and 500px |
+      | ** Max-Width to include:                                                                      |
+      | -Change of navigation display from inline to block and li tags to 100% width                  |
+      | -Change of sections and aside element width to 100% and background transparent overlay        |
+      | -Created a CSS menu popout through hover and display manipulation                             |
+        ---------------------------------------------------------------------------------------------
+    -->
 
-    <!--     Milestone 3 submitted: 09/23/2018      -----------------------------------------------
-  | -Modify my website with the following features: _____________________________________________ |
-  | -Created the services page with html tags (div, main, header, h1, p, ul, li, and a tags).     |
-  | -Added CSS classes for the services page.                                                     |
-  | -Implemented CSS Flexbox and Grid classes for current and future pages                        |
-  | -Utilized the CSS autoprefixer tools                                                          |
-  | - ** Created @keyframes animation for navigation links.                                       |
-  | - ** Refined @media queries for smaller than desktop displays                                 |
-  | - ** Experimented with various size types (em, rem) with fonts and padding for responsiveness |
-  | -Created a javascript date function to greet users in the header / navigation section         |
-  | - @TODO: Need to add more information and images to services and other mock pages.            |
-    --------------------------------------------------------------------------------------------- 
--->
+    <!--
+      Milestone 3 submitted: 09/23/2018      -----------------------------------------------
+      | -Modify my website with the following features: _____________________________________________ |
+      | -Created the services page with html tags (div, main, header, h1, p, ul, li, and a tags).     |
+      | -Added CSS classes for the services page.                                                     |
+      | -Implemented CSS Flexbox and Grid classes for current and future pages                        |
+      | -Utilized the CSS autoprefixer tools                                                          |
+      | - ** Created @keyframes animation for navigation links.                                       |
+      | - ** Refined @media queries for smaller than desktop displays                                 |
+      | - ** Experimented with various size types (em, rem) with fonts and padding for responsiveness |
+      | -Created a javascript date function to greet users in the header / navigation section         |
+      | - @TODO: Need to add more information and images to services and other mock pages.            |
+        ---------------------------------------------------------------------------------------------
+    -->
 
-    <!--     Milestone 4 submitted: 10/07/2018        ---------------------------------------------
-  | -Modify my website with the following features: _____________________________________________ |
-  | -Created pages and added more content to (products, about)                                    |
-  | -Used JavaScript to print a HTML table and loop through products and prices for display       |
-  | -Used JavaScript to print a HTML table and loop through dicount prices                        |
-    --------------------------------------------------------------------------------------------- 
--->
+    <!--
+      Milestone 4 submitted: 10/07/2018        ---------------------------------------------
+      | -Modify my website with the following features: _____________________________________________ |
+      | -Created pages and added more content to (products, about)                                    |
+      | -Used JavaScript to print a HTML table and loop through products and prices for display       |
+      | -Used JavaScript to print a HTML table and loop through dicount prices                        |
+        ---------------------------------------------------------------------------------------------
+    -->
 
-    <!--     Milestone 5 submitted: 10/21/2018        ---------------------------------------------
-  | -Modify my website with the following features: _____________________________________________ |
-  | -Find JavaScript objects and put them to work as "power tools" to add content to your work.   |
-  | -Used JavaScript to add functionality to a form on the services page that quotes prices.      |
-  | -Used JavaScript to print a HTML table and loop through dicount prices                        |
-    --------------------------------------------------------------------------------------------- 
--->
+    <!--
+      Milestone 5 submitted: 10/21/2018        ---------------------------------------------
+      | -Modify my website with the following features: _____________________________________________ |
+      | -Find JavaScript objects and put them to work as "power tools" to add content to your work.   |
+      | -Used JavaScript to add functionality to a form on the services page that quotes prices.      |
+      | -Used JavaScript to print a HTML table and loop through dicount prices                        |
+        ---------------------------------------------------------------------------------------------
+    -->
 
-    <!--     Milestone 6 submitted: 10/28/2018        ---------------------------------------------
-  | -Modify my website with the following features: _____________________________________________ |
-  | -Added a JavaScript image carousel to the products page with comments.                        |
-  | -Added images to the products pages for addition content.                                     |
-  | -Refined the menu by fixing broken or empty links                                             |
-  | -Refined the services page by consolidating the content.                                      |
-  | -Moved the inner HTML javascript to their own respective .js files with proper src linking    |
-    --------------------------------------------------------------------------------------------- 
--->
+    <!--
+      Milestone 6 submitted: 10/28/2018        ---------------------------------------------
+      | -Modify my website with the following features: _____________________________________________ |
+      | -Added a JavaScript image carousel to the products page with comments.                        |
+      | -Added images to the products pages for addition content.                                     |
+      | -Refined the menu by fixing broken or empty links                                             |
+      | -Refined the services page by consolidating the content.                                      |
+      | -Moved the inner HTML javascript to their own respective .js files with proper src linking    |
+        ---------------------------------------------------------------------------------------------
+    -->
+    <!--
+      Milestone 7 submitted: 11/18/2018        ---------------------------------------------
+      | -Modify my website with the following features: _____________________________________________ |
+      | -Add additional features to enhance your website.                                             |
+      | -Created a pet search / customer collage with drag and drop features in the about page        |
+      | -Create a collage .css and collage .js for the about page                                     |
+      | -Reworked media queries for the services page for a better UX                                 |
+        ---------------------------------------------------------------------------------------------
+    -->
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <div class="quick-toggle">
-        <a href="#top">
-            <h2>Top</h2>
-        </a>
+      <a href="#top"> <h2>Top</h2> </a>
     </div>
     <div class="container">
-        <div id="top" class="grid-container home-container">
-            <!-- An image to be used as a banner.  -->
-            <!-- Include a name of the service or business overlaid over the banner image. -->
-            <!-- Use h1 headings over text. -->
-            <header class="flex-container header">
-                <div class="logo">
-                    <!-- JavaScript greeting based on time of day -->
-                    <h1>Pawlished Pets</h1>
-                </div>
+      <div id="top" class="grid-container home-container">
+        <!-- An image to be used as a banner. -->
+        <!--
+          Include a name of the service or business overlaid over the banner image.
+        -->
+        <!-- Use h1 headings over text. -->
+        <header class="flex-container header">
+          <div class="logo">
+            <!-- JavaScript greeting based on time of day -->
+            <h1>Pawlished Pets</h1>
+          </div>
 
-                <!-- Navigational Section -->
-                <nav class="navbar">
-                    <ul class="flex-container">
-                        <a href="index.html">
-                            <li>Home</li>
-                        </a>
-                        <a href="services.html">
-                            <li>Services</li>
-                        </a>
-                        <a href="products.html">
-                            <li>Products</li>
-                        </a>
-                        <a href="about.html">
-                            <li>About</li>
-                        </a>
-                    </ul>
-                </nav>
-            </header>
+          <!-- Navigational Section -->
+          <nav class="navbar">
+            <ul class="flex-container">
+              <a href="index.html"> <li>Home</li> </a>
+              <a href="services.html"> <li>Services</li> </a>
+              <a href="products.html"> <li>Products</li> </a>
+              <a href="about.html"> <li>About</li> </a>
+            </ul>
+          </nav>
+        </header>
 
-            <div class="cardnav bg-dark">
-                <ul class="flex-container mx-0">
-                    <a href="services.html">
-                        <li>Pet Service</li>
-                    </a>
-                    <a href="products.html">
-                        <li>Grooming</li>
-                    </a>
-                </ul>
-            </div>
-
-            <!-- Use at least one paragraph tag within content.
-                    Use a br tag to separate text. -->
-            <section class="section1 txt-white bg-medium">
-                <p class="center mb-1">Welcome To The Official Pawlished Pets Website.
-                    <br><br> We offer many products and services such as ...</p>
-
-                <!-- Add an unordered list. -->
-                <ul class="center">
-                    <li><a class="txt-white" href="products.html">Products</a></li>
-                    <li><a class="txt-white" href="services.html">Grooming</a></li>
-                    <li><a class="txt-white" href="#">Pet Training</a></li>
-                </ul>
-            </section>
-
-            <!-- ** Section for newsletter -->
-            <section class="section2 txt-black bg-light">
-                <div class="rel-center">
-                    <p class="center">Join Our Mailing List To Recieve Discount Coupons And Special Offers!</p>
-                    <form class="form-control center">
-                        <label for="email">Email: </label>
-                        <input class="form-item" type="email" placeholder="name@domain.com" />
-                        <input class="btn" type="submit" value="Subscribe" />
-                    </form>
-                </div>
-            </section>
-
-            <!-- Add a second image to the web page with an appropriate size. -->
-            <aside class="aside txt-white">
-                <p class="rel-center">
-                    Pet Approved Services Guaranteed To Satisfy
-                </p>
-            </aside>
-            <!-- Add a footer with an h4 heading at the bottom to hold copyright information for the website. -->
-            <footer class="txt-white bg-dark">
-                <a href="mailto:david_cordova@stu.centralaz.edu">David Cordova</a> &copy; 2018
-            </footer>
+        <div class="cardnav bg-dark">
+          <ul class="flex-container mx-0">
+            <a href="services.html"> <li>Pet Service</li> </a>
+            <a href="products.html"> <li>Grooming</li> </a>
+          </ul>
         </div>
-    </div>
-</body>
 
+        <!--
+          Use at least one paragraph tag within content.
+             Use a br tag to separate text.
+        -->
+        <section class="section1 txt-white bg-medium">
+          <p class="center mb-1">
+            Welcome To The Official Pawlished Pets Website. <br /><br />
+            We offer many products and services such as ...
+          </p>
+
+          <!-- Add an unordered list. -->
+          <ul class="center">
+            <li><a class="txt-white" href="products.html">Products</a></li>
+            <li><a class="txt-white" href="services.html">Grooming</a></li>
+            <li><a class="txt-white" href="#">Pet Training</a></li>
+          </ul>
+        </section>
+
+        <!-- ** Section for newsletter -->
+        <section class="section2 txt-black bg-light">
+          <div class="rel-center">
+            <p class="center">
+              Join Our Mailing List To Recieve Discount Coupons And Special
+              Offers!
+            </p>
+            <form class="form-control center">
+              <label for="email">Email: </label>
+              <input
+                class="form-item"
+                type="email"
+                placeholder="name@domain.com"
+              />
+              <input class="btn" type="submit" value="Subscribe" />
+            </form>
+          </div>
+        </section>
+
+        <!-- Add a second image to the web page with an appropriate size. -->
+        <aside class="aside txt-white">
+          <p class="rel-center">Pet Approved Services Guaranteed To Satisfy</p>
+        </aside>
+        <!--
+          Add a footer with an h4 heading at the bottom to hold copyright information for the website.
+        -->
+        <footer class="txt-white bg-dark">
+          <a href="mailto:david_cordova@stu.centralaz.edu">David Cordova</a>
+          &copy; 2018
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
