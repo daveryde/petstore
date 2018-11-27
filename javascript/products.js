@@ -1,7 +1,6 @@
 var start = function() {
   // Gets the DOM elements from the page
   var sectionOne = document.querySelector('.tableOne');
-  var sectionTwo = document.querySelector('.tableTwo');
 
   // Array of key/value objects containing the product names and prices
   var products = [

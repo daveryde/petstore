@@ -29,7 +29,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     'header header header header'
-    'cardnav cardnav cardnav cardnav'
     'section1 section1 aside aside'
     'section2 section2 aside aside'
     'footer footer footer footer';
@@ -126,6 +125,11 @@ body {
   justify-content: space-between;
 }
 
+.row-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .start {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -178,6 +182,7 @@ header h1 {
   top: 5px;
   left: 5px;
   font-size: 1.3rem;
+  color: black;
 }
 
 /* NAVIGATION */
@@ -228,19 +233,15 @@ main {
 
 .section1 {
   grid-area: section1;
+  margin-bottom: 10px;
 }
 
 .section2 {
-  grid-area: section2;
+  grid-area: section2;  
 }
 
 section:nth-child(even) {
   margin-bottom: 5px;
-}
-
-.menu-left {
-  width: 100%;
-  text-align: center;
 }
 
 /* Section Area */
@@ -262,6 +263,7 @@ section ul {
 
 .aside {
   grid-area: aside;
+  margin-left: 5px;
 }
 
 aside {
@@ -305,6 +307,12 @@ figure {
   max-height: 400px;
 }
 
+#prev, #next {
+  font-size: .9rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  background: rgba(158, 75, 16, 1);
+}
 /* FORM */
 
 table {
@@ -312,6 +320,7 @@ table {
   margin: 0 auto;
   border-collapse: collapse;
   background: rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 table,
@@ -641,17 +650,6 @@ footer {
   background: rgba(76, 23, 11, 0.8);
 }
 
-.btn-lg {
-  background: rgba(158, 75, 16, 0.85);
-  margin: 0 10px 0 10px;
-  padding: 1.4rem;
-}
-
-.btn-sm {
-  font-size: 14px;
-  padding: 1.2rem;
-}
-
 #submit {
   width: 25%;
   margin-bottom: 5%;
@@ -669,10 +667,6 @@ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-.clear {
-  clear: both;
 }
 
 .min-height {
@@ -702,18 +696,6 @@ footer {
 .mx-0 {
   margin: 0 auto;
   text-align: center;
-}
-
-.mb-1 {
-  margin-bottom: 5px;
-}
-
-.mb-2 {
-  margin-bottom: 10px;
-}
-
-.mb-3 {
-  margin-bottom: 15px;
 }
 
 ul {
@@ -873,7 +855,7 @@ hr {
   section {
     font-size: 1.4em;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
   }
 
   .form-item {
@@ -882,10 +864,6 @@ hr {
 
   .btn {
     padding: 0.9rem;
-  }
-
-  .btn-lg {
-    padding: 1.2rem;
   }
 
   .left,
@@ -911,7 +889,9 @@ hr {
 
   .card-info1,
   .card-info2 {
-    justify-self: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: center;
   }
 
   .pickQuote {
@@ -922,9 +902,6 @@ hr {
   }
 
   .dynamicListing {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
@@ -935,6 +912,9 @@ hr {
   }
 
   .dynamicPrices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column nowrap;
@@ -942,6 +922,8 @@ hr {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
 }
 
@@ -1018,7 +1000,7 @@ hr {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
   }
 
   header h1 {
@@ -1039,7 +1021,7 @@ hr {
   aside,
   section {
     width: 100%;
-    height: 85vh;
+    height: 50vh;
   }
 
   section p {
@@ -1055,6 +1037,8 @@ hr {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   .cardnav li {
@@ -1143,12 +1127,6 @@ hr {
       'chead'
       'cinfo1'
       'cinfo2';
-  }
-
-  .btn-lg {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
   }
 
   .form-control {
