@@ -127,7 +127,7 @@ body {
 
 .row-around {
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .start {
@@ -237,7 +237,7 @@ main {
 }
 
 .section2 {
-  grid-area: section2;  
+  grid-area: section2;
 }
 
 section:nth-child(even) {
@@ -307,8 +307,9 @@ figure {
   max-height: 400px;
 }
 
-#prev, #next {
-  font-size: .9rem;
+#prev,
+#next {
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 10px 15px;
   background: rgba(158, 75, 16, 1);
@@ -890,8 +891,8 @@ hr {
   .card-info1,
   .card-info2 {
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: center;
+    -ms-flex-align: end;
+    align-items: center;
   }
 
   .pickQuote {
@@ -923,7 +924,7 @@ hr {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-line-pack: start;
-        align-content: flex-start;
+    align-content: flex-start;
   }
 }
 
@@ -1038,7 +1039,7 @@ hr {
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 
   .cardnav li {
